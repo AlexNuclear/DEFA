@@ -1,0 +1,38 @@
+.news-option {
+	.wrapper();
+}
+
+label::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -20px;
+    z-index: 1;
+    width: 16px;
+    height: 20px;
+    transition-timing-function: ease-in-out;
+    padding-right: 100px;
+    
+}
+
+
+label {
+    position: relative;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked ~ label::before {
+  background-image: url(../img/checked.png);
+  background-repeat:no-repeat;
+  content: "";
+  display: block;
+
+}
+input[type="checkbox"]:checked ~ span {
+	color: #f93546;
+}
+
+form {
+	display:flex;
+	flex-direction:column;
+}
